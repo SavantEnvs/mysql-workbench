@@ -1,0 +1,7 @@
+[mysqld]
+datadir = "/var/lib/mysql"
+sql_mode='STRICT_ALL_TABLES'
+novalue
+=
+[]
+[unterminated

@@ -1,0 +1,25 @@
+# .dockerignore for the commit-image build.
+# Goal: bake in the FULL repo (including .git history — the grader uses it),
+# dropping only local build artifacts and editor/OS cruft. Dev image, not minimal.
+# Lands at the fork root (the build context) when the template is copied in.
+
+# ── Build outputs / local cruft ──────────────────────────────────────────────
+# Keep build artifacts out of the context — the COPY boundary is what separates
+# source from artifacts. build.sh produces its outputs under /mayhem at build time.
+# Patterns are anchored to the paths mayhem/build.sh writes: upstream tracks files under build/ and
+# elsewhere, and every tracked file must land in /mayhem (no unanchored `build/`, `*.o`, ...).
+/mayhem/build-fuzz/
+/fuzz_mysql_parser
+/fuzz_mysql_parser-standalone
+/fuzz_sqlstring
+/fuzz_sqlstring-standalone
+/fuzz_string_utils
+/fuzz_string_utils-standalone
+/fuzz_config_file
+/fuzz_config_file-standalone
+/ctrf-report.json
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~

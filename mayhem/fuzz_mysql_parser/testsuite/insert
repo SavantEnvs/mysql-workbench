@@ -1,0 +1,2 @@
+
+INSERT INTO t (id, name) VALUES (1, 'a'), (2, 'b') ON DUPLICATE KEY UPDATE name = VALUES(name);

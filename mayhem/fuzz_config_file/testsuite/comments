@@ -1,0 +1,5 @@
+# global
+[mysqld] ; sect
+key = value # post
+;semi
+bool=yes

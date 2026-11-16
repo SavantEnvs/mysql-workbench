@@ -1,0 +1,1 @@
+/UPDATE t SET name = CONCAT(name, '_x') WHERE id IN (SELECT id FROM u); DELETE FROM t WHERE id < 3;

@@ -1,0 +1,1 @@
+ SELECT a.id, COUNT(*) AS n FROM a JOIN b ON a.id = b.a_id WHERE b.x BETWEEN 1 AND 10 GROUP BY a.id HAVING n > 1 ORDER BY n DESC LIMIT 5;

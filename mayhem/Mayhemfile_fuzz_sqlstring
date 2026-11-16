@@ -1,0 +1,9 @@
+project: savantenvs/mysql-workbench
+target: fuzz_sqlstring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sqlstring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sqlstring
+    libfuzzer: true
+    timeout: 30

@@ -1,0 +1,1 @@
+SHOW CREATE TABLE t; SET @a = 1, SESSION sql_mode = 'ANSI_QUOTES'; GRANT SELECT ON db.* TO 'u'@'localhost'; EXPLAIN SELECT 1;

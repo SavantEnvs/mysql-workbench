@@ -1,0 +1,4 @@
+!include /etc/mysql/extra.cnf
+!includedir /etc/mysql/conf.d/
+[mysqld]
+port=1
